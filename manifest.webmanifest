@@ -1,0 +1,15 @@
+{
+  "name": "전장도면 대시보드",
+  "short_name": "전장도면",
+  "description": "전장 설정 대시보드 · 피드백 알림",
+  "start_url": "./#fb",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#151a18",
+  "theme_color": "#c98a00",
+  "lang": "ko",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
