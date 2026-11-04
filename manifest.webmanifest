@@ -1,7 +1,7 @@
 {
-  "name": "전장도면 대시보드",
-  "short_name": "전장도면",
-  "description": "전장 설정 대시보드 · 피드백 알림",
+  "name": "업무 대시보드",
+  "short_name": "업무",
+  "description": "업무 대시보드 · 피드백 알림",
   "start_url": "./#fb",
   "scope": "./",
   "display": "standalone",

@@ -1,4 +1,4 @@
-/* 전장도면 대시보드 — 알림 서비스 워커 (v1.10.25, 서버 v9 웹 푸시)
+/* 업무 대시보드 — 알림 서비스 워커 (v1.10.25, 서버 v9 웹 푸시)
  * 서버는 FCM 'data' 메시지만 보냄 {title, body, link, tag} → 여기서 직접 알림 표시 (대시보드가 열려 있어도 표시).
  * 알림을 누르면 열려 있는 대시보드 창으로 가서 피드백 화면을 열고, 없으면 새 창(#fb)으로 연다.
  * 이 파일에는 비밀 값이 없음 (공개 저장소에 그대로 배포). Firebase SDK 없이 표준 Push API 만 사용.
@@ -10,7 +10,7 @@ self.addEventListener("push", (e) => {
   let p = {};
   try { p = e.data ? e.data.json() : {}; } catch (x) { p = { body: e.data ? e.data.text() : "" }; }
   const d = (p && (p.data || p.notification)) || p || {};          // FCM data 메시지 = { data: {...}, from, ... }
-  const title = String(d.title || "전장도면 대시보드");
+  const title = String(d.title || "업무 대시보드");
   e.waitUntil(self.registration.showNotification(title, {
     body: String(d.body || ""), tag: String(d.tag || "elec"), renotify: true,
     icon: "icon-192.png", badge: "icon-badge.png", data: { link: String(d.link || "./#fb") },
